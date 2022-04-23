@@ -1,0 +1,5 @@
+Package: SEAcalc
+Type: Package
+Title: NISP and MNE counter for zooarch diagnostic zone databases
+Version: 0.0.1.0
+RoxygenNote: 7.1.2
