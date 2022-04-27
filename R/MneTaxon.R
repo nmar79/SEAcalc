@@ -3,12 +3,12 @@
 #' @param data a data frame with zooarchaeological data. Should contain "layer", "taxon", "element", and "zone" columns. 
 #' @param zones a data frame with "element", "zone", and "description" columns.
 #' @param taxon the name of the taxon (or several taxa) for which zone counts and MNEs should be calculated.
-#' @return MNE for each element by layer/context, as a csv file; Count of diagnostic zones for the selected taxon by layer/context.
+#' @return MNE for each element by layer/context, as a dataframe object and a csv file; Count of diagnostic zones for the selected taxon by layer/context.
 #' @examples 
-#' ZoneCount(read.csv("my_data.csv"), read.csv("my_zone_list"), c("capra","bovid_2"))
+#' MneTaxon(read.csv("my_data.csv"), read.csv("my_zone_list.csv"), c("capra","bovid_2"))
 #' @export
 
-ZoneCount <- function(data, zones, taxon){
+MneTaxon <- function(data, zones, taxon){
 
 #prepare var loops and receiving df
 nzones <- length(zones$zone)
@@ -45,6 +45,7 @@ zone_counts_df <- cbind(zone_counts_df,looper_1)
 
 colnames(zone_counts_df) <- c("element", "zone","description",layers, "total")
 
+zone_counts_df <<- zone_counts_df
 write.csv(zone_counts_df, "zone_counts.csv")
 
 
@@ -70,6 +71,7 @@ for (j in 4:(length(layers)+3)){
 
 colnames(MNE_df) <- c("element",layers)
 
+MNE_by_element <<- MNE_df
 write.csv(MNE_df, "MNE_by_element.csv")
 
 }

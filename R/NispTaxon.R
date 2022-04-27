@@ -4,10 +4,10 @@
 #' @param data a data frame with zooarchaeological data. Should contain "layer", "taxon", "element", and "zone" columns. 
 #' @return NISP per taxon by layer/context, as a csv file.
 #' @examples 
-#' NispCalc(read.csv("my_data.csv"))
+#' NispTaxon(read.csv("my_data.csv"))
 #' @export
 
-NispCalc <- function(data){
+NispTaxon <- function(data){
   
   #ancillary vars
   taxa <- unique(data$taxon)
@@ -46,7 +46,8 @@ NispCalc <- function(data){
   colnames(NISPtaxa_out) <- c("taxon",layers, "total")
   
   #output
-  
+
+  NISPtaxa_out <<- NISPtaxa_out
   write.csv(NISPtaxa_out, "NISP_by_taxon.csv")
   
   #cleanup
