@@ -2,7 +2,7 @@
 % Please edit documentation in R/NispElement.R
 \name{NispElement}
 \alias{NispElement}
-\title{Calculate NISP for each element of a taxon for each layer/context}
+\title{NispElement}
 \usage{
 NispElement(data, taxon)
 }
@@ -15,7 +15,7 @@ NispElement(data, taxon)
 NISP per element for a by layer/context, as a csv file and a data frame object.
 }
 \description{
-Reads a zooarchaeological database and returns a .csv file with counts of elements (in rows) by layers/contexts (in columns).
+Calculate NISP for each element of a taxon for each layer/context. Reads a zooarchaeological database and returns a .csv file with counts of elements (in rows) by layers/contexts (in columns).
 }
 \examples{
 NispElement(read.csv("my_data.csv"))

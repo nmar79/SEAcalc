@@ -1,4 +1,5 @@
-#' Calculate the number of diagnostic zones and the element MNE for a given taxon by layer/context
+#' MneTaxon
+#' @description Calculate the number of diagnostic zones and the element MNE for a given taxon by layer/context
 #' Reads a zooarchaeological database and returns a .csv file with counts; elements/zones in rows and layers/contexts in columns. 
 #' @param data a data frame with zooarchaeological data. Should contain "layer", "taxon", "element", and "zone" columns. 
 #' @param zones a data frame with "element", "zone", and "description" columns.

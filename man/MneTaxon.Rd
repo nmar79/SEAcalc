@@ -2,8 +2,7 @@
 % Please edit documentation in R/MneTaxon.R
 \name{MneTaxon}
 \alias{MneTaxon}
-\title{Calculate the number of diagnostic zones and the element MNE for a given taxon by layer/context
-Reads a zooarchaeological database and returns a .csv file with counts; elements/zones in rows and layers/contexts in columns.}
+\title{MneTaxon}
 \usage{
 MneTaxon(data, zones, taxon)
 }

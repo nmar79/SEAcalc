@@ -2,7 +2,7 @@
 % Please edit documentation in R/NispTaxon.R
 \name{NispTaxon}
 \alias{NispTaxon}
-\title{Calculate NISP by taxon for each layer/context}
+\title{NispTaxon}
 \usage{
 NispTaxon(data)
 }
@@ -13,7 +13,7 @@ NispTaxon(data)
 NISP per taxon by layer/context, as a csv file.
 }
 \description{
-Reads a zooarchaeological database and returns a .csv file with taxain rows and layers/contexts in columns.
+Calculate NISP by taxon for each layer/context. Reads a zooarchaeological database and returns a .csv file with taxain rows and layers/contexts in columns.
 }
 \examples{
 NispTaxon(read.csv("my_data.csv"))

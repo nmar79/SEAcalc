@@ -1,6 +1,5 @@
-#' Calculate NISP for each element of a taxon for each layer/context
-#'
-#' Reads a zooarchaeological database and returns a .csv file with counts of elements (in rows) by layers/contexts (in columns). 
+#' NispElement
+#' @description Calculate NISP for each element of a taxon for each layer/context. Reads a zooarchaeological database and returns a .csv file with counts of elements (in rows) by layers/contexts (in columns). 
 #' @param data a data frame with zooarchaeological data. Should contain "layer", "taxon", "element", and "zone" columns. 
 #' @param taxon the name of a target taxon
 #' @return NISP per element for a by layer/context, as a csv file and a data frame object.
