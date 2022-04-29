@@ -4,7 +4,7 @@
 #' @param data a data frame with zooarchaeological data. Should contain "layer", "taxon", "element", and "zone" columns. 
 #' @return NISP per taxon by layer/context, as a csv file.
 #' @examples 
-#' NispTaxon(read.csv("my_data.csv"))
+#' NispTaxon(read.csv("my_data.csv")) #junk characters added to the first colname when file is in UTF-8; rename manually or import data with fileEncoding="UTF-8-BOM"
 #' @export
 
 NispTaxon <- function(data){

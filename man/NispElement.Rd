@@ -18,5 +18,5 @@ NISP per element for a by layer/context, as a csv file and a data frame object.
 Calculate NISP for each element of a taxon for each layer/context. Reads a zooarchaeological database and returns a .csv file with counts of elements (in rows) by layers/contexts (in columns).
 }
 \examples{
-NispElement(read.csv("my_data.csv"))
+NispElement(read.csv("my_data.csv", "sheep")) #add fileEncoding="UTF-8-BOM" to remove junk character added to first column name, or change it manually
 }

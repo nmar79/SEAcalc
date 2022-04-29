@@ -16,5 +16,5 @@ NISP per taxon by layer/context, as a csv file.
 Calculate NISP by taxon for each layer/context. Reads a zooarchaeological database and returns a .csv file with taxain rows and layers/contexts in columns.
 }
 \examples{
-NispTaxon(read.csv("my_data.csv"))
+NispTaxon(read.csv("my_data.csv")) #junk characters added to the first colname when file is in UTF-8; rename manually or import data with fileEncoding="UTF-8-BOM"
 }

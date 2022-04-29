@@ -7,14 +7,6 @@ To install the package, use
 
 devtools::install_github("nmar79/SEAcalc")
 
-Database template example:
-
-specimen    layer   taxon   element   zone      ....
-NR-0001     4       capra   humerus   HU4,HU5
-NR-0002     7       gazelle femur     FE1
-.
-.
-.
 
 
 

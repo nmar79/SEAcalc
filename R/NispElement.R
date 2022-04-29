@@ -4,7 +4,7 @@
 #' @param taxon the name of a target taxon
 #' @return NISP per element for a by layer/context, as a csv file and a data frame object.
 #' @examples 
-#' NispElement(read.csv("my_data.csv"))
+#' NispElement(read.csv("my_data.csv", "sheep")) #add fileEncoding="UTF-8-BOM" to remove junk character added to first column name, or change it manually
 #' @export
 
 NispElement <- function(data, taxon){
@@ -13,10 +13,12 @@ NispElement <- function(data, taxon){
 selected_taxon <- taxon
 NISP_df_in <- data[which(data$taxon == taxon),]
 
+#remove "" element names
 elements <- unique(data$element)
+temp <- 1:length(elements)
+for (i in 1:length(elements)){temp[i] <- isTRUE(elements[i] == "")}
+if (sum(temp) > 0) {elements <- elements[-which(temp == TRUE)]} else {rm(temp)}
 
-empty_cat <- which(elements == "")
-if (is.na(empty_cat) == FALSE){elements <- elements[!elements %in% ""]}
 
 NISPs <- 1:length(elements)
 layers <- unique(data$layer)
